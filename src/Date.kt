@@ -39,6 +39,8 @@ Difference:
      fun <name>(<args>): <return_type> { <body> }
 
      return <expr>
+
+     for (<name> in <list>) { }
  */
 
 
@@ -97,17 +99,7 @@ fun showMonth(month: Int): String {
 
 fun main() {
     // Tests for showMonth
-    println(showMonth(1))
-    println(showMonth(2))
-    println(showMonth(3))
-    println(showMonth(4))
-    println(showMonth(5))
-    println(showMonth(6))
-    println(showMonth(7))
-    println(showMonth(8))
-    println(showMonth(9))
-    println(showMonth(10))
-    println(showMonth(11))
-    println(showMonth(12))
-
+    for (i in 1..12) {
+        println(showMonth(i))
+    }
 }
