@@ -9,18 +9,26 @@ Two kinds of language constructions:
 
 Difference:
 1. Expressions are values that have types
-1: Int
-false, true: Boolean
-"Kate": String
-someVariable: someType (this is expression too!)
-xor: (Boolean, Boolean) -> Boolean
-if-else: if (<condition> : Boolean) { <expression_if_true> : t } else { <expression_if_false> : t } : t
-if ("January") -- WRONG !!!
-if (==) -- WRONG !!!
-if (1) -- WRONG !!!
-if (== 1) -- WRONG !!!
-if (xor(true, false)) -- OK !
-if (true) { "January" } else { 5 } -- WRONG !!!
+   42: Int
+   false, true: Boolean
+   "Kate": String
+   someVariable: someType (this is expression too!)
+   xor: (Boolean, Boolean) -> Boolean
+   if-else: if (<condition> : Boolean) { <expression_if_true> : t } else { <expression_if_false> : t } : t
+      if ("January") -- WRONG !!!
+      if (==) -- WRONG !!!
+      if (1) -- WRONG !!!
+      if (== 1) -- WRONG !!!
+      if (xor(true, false)) -- OK !
+      if (true) { "January" } else { 5 } -- WRONG !!!
+
+   when (<name>) {
+     <pattern1> -> <expr1> : t
+     <pattern2> -> <expr2> : t
+     ...
+     <patternN> -> <exprN> : t
+     else -> <exprElse> : t
+   } : t
 
 2. Statements: other
 val <name> = <expr : t>

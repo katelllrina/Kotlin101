@@ -7,36 +7,21 @@ Example result:
  */
 
 fun showMonth(month: Int): String {
-    val result = if (month == 1) {
-        "January"
-        /*
-        val month = "January" - only this string is statement
-        month - this string add for make expression
-         */
-    } else if (month == 2) {
-        "February"
-    } else if (month == 3) {
-        "March"
-    } else if (month == 4) {
-        "April"
-    } else if (month == 5) {
-        "May"
-    } else if (month == 6) {
-        "June"
-    } else if (month == 7) {
-        "July"
-    } else if (month == 8) {
-        "August"
-    } else if (month == 9) {
-        "September"
-    } else if (month == 10) {
-        "October"
-    } else if (month == 11) {
-        "November"
-    } else {
-        "December"
+    val result = when (month) {
+        1 -> "January"
+        2 -> "February"
+        3 -> "March"
+        4 -> "April"
+        5 -> "May"
+        6 -> "June"
+        7 -> "July"
+        8 -> "August"
+        9 -> "September"
+        10 -> "October"
+        11 -> "November"
+        12 -> "December"
+        else -> "Unknown"
     }
-
     return result
 }
 
