@@ -35,3 +35,32 @@ return <expr>
 
 for (<name> in <list>) { }
 */
+
+// --------------------
+// Code Simplifications
+// --------------------
+/*
+1. else-if
+
+   From:
+
+   if (<condition1>) {
+      <expr1>
+   } else {
+     if (<condition2>) {
+       <expr2>
+     } else {
+      <expr3>
+     }
+   }
+
+   To:
+
+   if (<condition1>) {
+     <expr>
+   } else if (<condition2>) {
+     <expr2>
+   } else {
+     <expr3>
+   }
+ */
