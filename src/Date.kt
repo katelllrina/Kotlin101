@@ -7,8 +7,8 @@ Example result:
 
 Steps:
 + 1. Convert month number to month string
-  2. Convert month day to suffixed day
-  3. Form date from month string, suffixed day and year
++ 2. Convert month day to suffixed day
++ 3. Form date from month string, suffixed day and year
   4. Add time to string formed on step 3
   5. Guess time of day from time
   6. Produce final string
@@ -44,6 +44,13 @@ fun showDay(day: Int): String {
     return result
 }
 
+fun showAll (year: Int, month: Int, day: Int): String {
+    val monthString = showMonth(month)
+    val dayString = showDay(day)
+    val result = "$monthString $dayString, $year"
+    return result
+}
+
 fun main() {
     // Tests for showMonth
     for (i in 1..12) {
@@ -53,4 +60,7 @@ fun main() {
     for (i in 1..31) {
         println(showDay(i))
     }
+
+    println(showAll(2024, 2,5 ))
+    println(showAll(2024, 12,27 ))
 }
