@@ -51,6 +51,45 @@ fun showAll (year: Int, month: Int, day: Int): String {
     return result
 }
 
+fun charToInt(c: Char): Int {
+    val result = when (c) {
+        '0' -> 0
+        '1' -> 1
+        '2' -> 2
+        '3' -> 3
+        '4' -> 4
+        '5' -> 5
+        '6' -> 6
+        '7' -> 7
+        '8' -> 8
+        '9' -> 9
+        else -> -1
+    }
+    return result
+}
+
+// Example: stringToInt("2024") = 2024
+fun stringToInt(s: String): Int {
+    val result = when (s.length) {
+        2 -> numberFromTwoDigits(charToInt(s[0]), charToInt(s[1]))
+        4 -> numberFromFourDigits(charToInt(s[0]),charToInt(s[1]),charToInt(s[2]),charToInt(s[3]))
+        else -> -1
+    }
+    return result
+}
+
+// Example: showDateStr("2024-05-31") = "May 31st, 2024"
+fun showDateStr(date: String): String {
+    val yearString = date.substring(0..3)
+    val monthString = date.substring(5..6)
+    val dayString = date.substring(8..9)
+    val year = stringToInt(yearString)
+    val month = stringToInt(monthString)
+    val day = stringToInt(dayString)
+    val result = showAll(year,month, day)
+    return result
+}
+
 fun main() {
     // Tests for showMonth
     for (i in 1..12) {
@@ -63,4 +102,6 @@ fun main() {
 
     println(showAll(2024, 2,5 ))
     println(showAll(2024, 12,27 ))
+    println(stringToInt("2035"))
+    println(showDateStr("2024-06-01"))
 }

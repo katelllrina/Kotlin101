@@ -11,6 +11,7 @@ Difference:
 1. Expressions are values that have types
    42: Int
    false, true: Boolean
+   'x': Char
    "Kate": String
    someVariable: someType (this is expression too!)
    xor: (Boolean, Boolean) -> Boolean
@@ -43,6 +44,36 @@ return <expr>
 
 for (<name> in <list>) { }
 */
+
+/* Function types
+
+   1. Top-level functions
+      myFunction(x, y, z)
+
+   2. Member functions
+      x.myFunction(y, z)
+
+   3. Member properties
+      x.someValue
+
+ */
+
+/* String
+
+Examples: "Kate", "2024-04-09", "x", ""
+
+Properties:
+   myString.length - number of characters in myString
+
+Extracting chars:
+
+   val s = "Kate"
+   // s[0] = 'K'
+   // s[1] = 'a'
+   // s[2] = 't'
+   // s[3] = 'e'
+
+ */
 
 // --------------------
 // Code Simplifications
