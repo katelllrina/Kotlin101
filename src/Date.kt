@@ -5,12 +5,26 @@ Example datetime:
 Example result:
   "May 29th, 2024, 18:33:41, Evening"
 
+Day: 28
+Month: 05 or May
+Year: 2024
+Date: day + month + year (example: "2024-05-28" or "May 28th, 2024" or "28 May 2024" or "05/29/2024")
+Time: 18:33:41
+Datetime: date + time
+Daytime: Evening
+
+Input:
+  2024-05-29 18:33:41
+  |        | |      |
+  |--------| |------|
+     date      time
+
 Steps:
 + 1. Convert month number to month string
 + 2. Convert month day to suffixed day
 + 3. Form date from month string, suffixed day and year
-  4. Add time to string formed on step 3
-  5. Guess time of day from time
++ 4. Add time to string formed on step 3
++ 5. Guess time of day from time
   6. Produce final string
 */
 
@@ -44,24 +58,22 @@ fun showDay(day: Int): String {
     return result
 }
 
-
-fun showTimeName (hour: Int): String {
-val timeString = when (hour) {
-    6,7,8,9,10,11 -> "Morning"
-    12,13,14,15,16,17,18 -> "Day"
-    19,20,21 -> "Evening"
-    22,23,0,1,2,3,4,5 -> "Night"
-    else -> "uknown"
-}
+fun showDaytime (hour: Int): String {
+    val timeString = when (hour) {
+        in 6..11 -> "Morning"
+        in 12..18 -> "Afternoon"
+        in 19..21 -> "Evening"
+        in 22..23, in 0..5 -> "Night"
+        else -> "unknown"
+    }
     val result = "$timeString"
     return result
 }
 
-fun showAll (year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int): String {
+fun showAll (year: Int, month: Int, day: Int): String {
     val monthString = showMonth(month)
     val dayString = showDay(day)
-    val timeString = showTimeName(hour)
-    val result = "$monthString $dayString, $year, $hour:$min:$sec, $timeString"
+    val result = "$monthString $dayString, $year"
     return result
 }
 
@@ -92,21 +104,34 @@ fun stringToInt(s: String): Int {
     return result
 }
 
-// Example: showDateStr("2024-05-31") = "May 31st, 2024"
-fun showDateStr(date: String): String {
+// Example: showTime("18:33:41") = "18:33:41, Evening"
+fun showTime(time: String): String {
+    val hourString = time.substring(0..1)
+    val hour = stringToInt(hourString)
+    val daytime = showDaytime(hour)
+    val result = "$time, $daytime"
+    return result
+}
+
+// Example: showDate("2024-05-31") = "May 31st, 2024"
+fun showDate(date: String): String {
     val yearString = date.substring(0..3)
     val monthString = date.substring(5..6)
     val dayString = date.substring(8..9)
-    val hourString = date.substring(11..12)
-    val minString = date.substring(14..15)
-    val secString = date.substring(17..18)
-    val hour = stringToInt(hourString)
-    val min = stringToInt(minString)
-    val sec = stringToInt(secString)
     val year = stringToInt(yearString)
     val month = stringToInt(monthString)
     val day = stringToInt(dayString)
-    val result = showAll(year,month, day, hour, min, sec)
+    val result = showAll(year,month,day)
+    return result
+}
+
+// Example: showDatetime("2024-05-29 18:33:41") = "May 29th, 2024, 18:33:41, Evening"
+fun showDatetime(datetime: String): String {
+    val dateString = datetime.substring (0..9)
+    val date = showDate(dateString)
+    val timeString = datetime.substring(11..18)
+    val time = showTime(timeString)
+    val result = "$date, $time"
     return result
 }
 
@@ -124,6 +149,6 @@ fun main() {
     println(showAll(2024, 12,27 ))
     println(stringToInt("2035")) */
 
-
-    println(showDateStr("2024-05-29 00:14:42"))
+    println(showTime("18:23:34"))
+    println(showDatetime("2024-05-29 00:14:42"))
 }
