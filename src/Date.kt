@@ -44,10 +44,24 @@ fun showDay(day: Int): String {
     return result
 }
 
-fun showAll (year: Int, month: Int, day: Int): String {
+
+fun showTimeName (hour: Int): String {
+val timeString = when (hour) {
+    6,7,8,9,10,11 -> "Morning"
+    12,13,14,15,16,17,18 -> "Day"
+    19,20,21 -> "Evening"
+    22,23,0,1,2,3,4,5 -> "Night"
+    else -> "uknown"
+}
+    val result = "$timeString"
+    return result
+}
+
+fun showAll (year: Int, month: Int, day: Int, hour: Int, min: Int, sec: Int): String {
     val monthString = showMonth(month)
     val dayString = showDay(day)
-    val result = "$monthString $dayString, $year"
+    val timeString = showTimeName(hour)
+    val result = "$monthString $dayString, $year, $hour:$min:$sec, $timeString"
     return result
 }
 
@@ -83,10 +97,16 @@ fun showDateStr(date: String): String {
     val yearString = date.substring(0..3)
     val monthString = date.substring(5..6)
     val dayString = date.substring(8..9)
+    val hourString = date.substring(11..12)
+    val minString = date.substring(14..15)
+    val secString = date.substring(17..18)
+    val hour = stringToInt(hourString)
+    val min = stringToInt(minString)
+    val sec = stringToInt(secString)
     val year = stringToInt(yearString)
     val month = stringToInt(monthString)
     val day = stringToInt(dayString)
-    val result = showAll(year,month, day)
+    val result = showAll(year,month, day, hour, min, sec)
     return result
 }
 
@@ -100,8 +120,10 @@ fun main() {
         println(showDay(i))
     }
 
-    println(showAll(2024, 2,5 ))
+   /* println(showAll(2024, 2,5 ))
     println(showAll(2024, 12,27 ))
-    println(stringToInt("2035"))
-    println(showDateStr("2024-06-01"))
+    println(stringToInt("2035")) */
+
+
+    println(showDateStr("2024-05-29 00:14:42"))
 }
