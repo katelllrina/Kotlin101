@@ -75,9 +75,9 @@ Extracting chars:
 
  */
 
-// --------------------
-// Code Simplifications
-// --------------------
+// ----------------------------------
+// Code Simplifications / Refactoring
+// ----------------------------------
 /*
 1. else-if
 
@@ -102,4 +102,31 @@ Extracting chars:
    } else {
      <expr3>
    }
+
+2. Inserting just string
+   From:
+     "$someVariable"
+
+      AND
+
+      someVariable: String
+
+   To:
+     someVariable
+
+3. Last return
+   From
+     val result = <expr>
+     return result
+   To:
+     return <expr>
+
+4. Function expression
+   From:
+     fun myFunction(args...): Type {
+       return <expr>
+     }
+   To:
+     fun myFunction(args...): Type =
+        <expr>
  */
