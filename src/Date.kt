@@ -71,19 +71,7 @@ fun showAll(year: Int, month: Int, day: Int): String {
 }
 
 fun charToInt(c: Char): Int =
-    when (c) {
-        '0' -> 0
-        '1' -> 1
-        '2' -> 2
-        '3' -> 3
-        '4' -> 4
-        '5' -> 5
-        '6' -> 6
-        '7' -> 7
-        '8' -> 8
-        '9' -> 9
-        else -> -1
-    }
+    c.code - 48
 
 // Example: stringToInt("2024") = 2024
 fun stringToInt(s: String): Int =

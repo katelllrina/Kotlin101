@@ -4,10 +4,12 @@ fun, val, if-else, return - keywords / reserved words / language constructions
 
 
 Two kinds of language constructions:
+
 1. Statements
 2. Expressions
 
 Difference:
+
 1. Expressions are values that have types
    42: Int
    false, true: Boolean
