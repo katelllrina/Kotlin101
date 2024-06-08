@@ -34,17 +34,26 @@ Difference:
    } : t
 
 2. Statements: other
-val <name> = <expr : t>
-=> <name: t> is expression
-val z = 8
-val x = z + 5
-=> x: Int
+   val - value (immutable)
+   var - variable (mutable)
 
-fun <name>(<args>): <return_type> { <body> }
+   val <name> = <expr : t>
+     => <name: t> is expression
+   val z = 8
+   val x = z + 5
+     => x: Int
 
-return <expr>
+   var x = 10
 
-for (<name> in <list>) { }
+   fun <name>(<args>): <return_type> { <body> }
+
+   return <expr>
+
+   for (<name> in <list>) { }
+
+   while (<condition: Boolean>) {
+     <body>
+   }
 */
 
 /* Function types
@@ -131,4 +140,10 @@ Extracting chars:
    To:
      fun myFunction(args...): Type =
         <expr>
+
+5. Simplify if (Part 1)
+   From:
+     if (<condition>) { true } else { false }
+   To:
+     <condition>
  */
