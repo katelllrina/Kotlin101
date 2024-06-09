@@ -56,6 +56,39 @@ Difference:
    }
 */
 
+/*
+---------
+OPERATORS
+---------
+
+1. Arithmetic
+   + (addition)
+   - (subtraction)
+   * (multiplication)
+   / (division)
+   % (modulus)
+
+   Statements (works only with 'var'!)
+     x += y (same as x = x + y)
+     x -= y (same as x = x - y)
+     x *= y (same as x = x * y)  // x *= 5
+     x /= y (same as x = x / y)
+     x %= y (same as x = x % y)
+
+2. Comparison
+   > (greater)
+   < (less)
+   >= (greater or equal)
+   <= (less or equal)
+   == (equal)
+   != (not equal)
+
+3. Boolean
+   && (logical and)
+   || (logical or)
+   ! (logical not)
+ */
+
 /* Function types
 
    1. Top-level functions
