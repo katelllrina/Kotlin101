@@ -2,6 +2,13 @@
 
 ## Division
 
+### Kotlin
+
+67 / 8 = 8 - integral division ("div")
+67 % 8 = 3 - modulos ("mod")
+
+### Math
+
 **a | b** (a divisible by b) - `a = b * n`, n >= 1
 
 Example:
