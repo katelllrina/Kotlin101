@@ -2,8 +2,19 @@ fun lastDigit(n: Int): Int {
     return n % 10
 }
 
+fun cutDigit(n: Int): Int {
+    return n / 10
+}
+
+fun sumDigit(n: Int):Int {
+  return lastDigit(n) + cutDigit(n)
+}
 fun main() {
     println(lastDigit(2356))
+
+    println(cutDigit(56))
+
+    println( sumDigit (77))
 }
 
 /*
