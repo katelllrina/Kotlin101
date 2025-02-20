@@ -34,6 +34,17 @@ fun sumDigit3Alternative(n: Int): Int { // n = 34
     return last + middle + first
 }
 
+fun sumDigits(n: Int): Int {
+    var res = 0
+    var cut = n
+    while (cut > 0) {
+        val last = lastDigit(cut)
+        cut = cutDigit(cut)
+        res += last
+    }
+    return res
+}
+
 fun main() {
     println(lastDigit(2356))
 
@@ -46,6 +57,8 @@ fun main() {
     println( sumDigit3Alternative(345))
 
     println( sumDigit3Alternative(34))
+
+    println (sumDigits(517))
 }
 
 /*
