@@ -45,6 +45,21 @@ fun sumDigits(n: Int): Int {
     return res
 }
 
+fun sumDigitsRec(n: Int): Int {
+    if (n < 10) return n
+    val last = lastDigit(n)
+    val cut = cutDigit(n)
+    val resultSmaller = sumDigitsRec(cut)
+    return resultSmaller + last
+}
+
+fun sumDigitsRec2(n: Int): Int {
+    if (n < 10) return n
+    return sumDigitsRec2(cutDigit(n)) + lastDigit(n)
+}
+
+fun sumDigitsRec3(n: Int): Int = if (n < 10) n else sumDigitsRec3(cutDigit(n)) + lastDigit(n)
+
 fun main() {
     println(lastDigit(2356))
 
@@ -58,7 +73,9 @@ fun main() {
 
     println( sumDigit3Alternative(34))
 
-    println (sumDigits(517))
+    println (sumDigits(123))
+
+    println (sumDigitsRec(2156))
 }
 
 /*
