@@ -76,6 +76,10 @@ fun main() {
     println (sumDigits(123))
 
     println (sumDigitsRec(2156))
+
+    println (sumDigitsRec2(2156))
+
+    println (sumDigitsRec3(2156))
 }
 
 /*
