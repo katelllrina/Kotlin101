@@ -1,8 +1,5 @@
 /*
 
-fun, val, if-else, return - keywords / reserved words / language constructions
-
-
 Two kinds of language constructions:
 
 1. Statements
@@ -60,28 +57,6 @@ Difference:
 ---------
 OPERATORS
 ---------
-
-1. Arithmetic
-   + (addition)
-   - (subtraction)
-   * (multiplication)
-   / (division)
-   % (modulus)
-
-   Statements (works only with 'var'!)
-     x += y (same as x = x + y)
-     x -= y (same as x = x - y)
-     x *= y (same as x = x * y)  // x *= 5
-     x /= y (same as x = x / y)
-     x %= y (same as x = x % y)
-
-2. Comparison
-   > (greater)
-   < (less)
-   >= (greater or equal)
-   <= (less or equal)
-   == (equal)
-   != (not equal)
 
 3. Boolean
    && (logical and)
@@ -157,13 +132,6 @@ Extracting chars:
 
    To:
      someVariable
-
-3. Last return
-   From
-     val result = <expr>
-     return result
-   To:
-     return <expr>
 
 4. Function expression
    From:
