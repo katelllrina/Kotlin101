@@ -35,3 +35,20 @@
   - `return lastDigit(n) * 10`
 - `while`: conditional cycle
   - `while (n < 10) { n += 1 }`
+
+## Types
+
+- Int: numbers (436, -2)
+- Long: "big" numbers
+
+### Int
+
+Numbers, positive or negative, 32 bits, between:
+
+- `-2^31..2^31 - 1`
+
+### Long
+
+Numbers, positive or negative, 64 bits, between:
+
+- `-2^63..2^63 - 1`

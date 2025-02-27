@@ -22,5 +22,6 @@ fun main() {
     println("Input: n = 11 | Expected: 1011 | Got: ${decimal2binary(11)}")
     println("Input: n = 16 | Expected: 10000 | Got: ${decimal2binary(16)}")
     println("Input: n = 7 | Expected: 111 | Got: ${decimal2binary(7)}")
-    println("Input: n = 67 | Expected: 1000011 | Got: ${decimal2binary(67)}")
+    println("Input: n = 67 | Expected: 1000011 | Got: ${decimal2binary(400)}")
+    println("Input: n = 67 | Expected: 1000011 | Got: ${decimal2binary(2000)}")
 }
