@@ -40,6 +40,9 @@
 
 - Int: numbers (436, -2)
 - Long: "big" numbers
+- String: text ("Hello, Kate!")
+- Char: symbol ('x')
+- Boolean: true, false
 
 ### Int
 
@@ -52,3 +55,19 @@ Numbers, positive or negative, 32 bits, between:
 Numbers, positive or negative, 64 bits, between:
 
 - `-2^63..2^63 - 1`
+
+### Char
+
+Single symbol
+
+- '1', 'x', '5'
+
+**!!! IMPORTANT !!!** `1` and `'1'` are not the same!
+
+### String
+
+Text of arbitrary length: `"Hello, it's Friday!"`
+
+- str[i]: symbol at index `i` (starts with 0)
+  - Has type `Char`
+- s.length: number of symbols in the string
