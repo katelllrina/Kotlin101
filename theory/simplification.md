@@ -10,9 +10,18 @@
 | `n = n / x` | `n /= x`  | Always   | 
 | `n = n % x` | `n %= x`  | Always   |
 
+## Ranges
+
+> `a..b`
+
+| **Before**       | **After**     | **When** |
+|------------------|---------------|----------|
+| `start..end - 1` | `start..<end` | Always   | 
+
 ## Shortening
 
 1. Last return
+
    Before
    ```kotlin
    val result = <expr>
@@ -21,4 +30,19 @@
    After
    ```kotlin
    return <expr>
+   ```
+
+2. Indexation
+
+   Before
+   ```kotlin
+   var i = <start>
+   while (i < <end>) {
+      ...
+      i += 1
+   }
+   ```
+   After
+   ```kotlin
+   for (i in <start>..<end> - 1) { ... }
    ```

@@ -33,8 +33,21 @@
   - `return 10`
   - `return n + 7`
   - `return lastDigit(n) * 10`
-- `while`: conditional cycle
+- `while`: conditional loop
   - `while (n < 10) { n += 1 }`
+- `for`: for-loop
+  - `for (i in 3..7) { println(i) }`
+
+### For-loops
+
+Indexed for-loop:
+
+```kotlin
+val str = "Hello"
+for (i in 0..str.length - 1) { ... }  // i: Int, i is index
+for (i in 0..<str.length) { ... }  // i: Int, i is index
+for (c in str) { ... }  // c: Char, c is symbol
+```
 
 ## Types
 
