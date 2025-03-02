@@ -40,6 +40,13 @@ fun findIndex(str: String, c: Char): Int {
     return -1
 }
 
+fun findIndexRight(str: String, c: Char): Int {
+    for (i in str.length - 1 downTo 0) {
+        if (str[i] == c) return i
+    }
+    return -1
+}
+
 fun main() {
     println("Hello, world!")
     println("100 + 50 = 264 :(")
@@ -50,8 +57,6 @@ fun main() {
     println(hasZero("x"))
     println(hasZero(""))
     println(hasZero4("Hell0"))
-    println(findIndex("Hello", 'o'))
-    println(findIndex("Hello", 'h'))
 
     val xxx = "It's Friday!"
     println(xxx)
@@ -61,4 +66,9 @@ fun main() {
     println(xxx[4])
     println(xxx[5])
 //    println(str[99])
+
+    println("=== findIndex ===")
+    println(findIndex("Hello", 'o'))
+    println(findIndex("Hello", 'l'))
+    println(findIndexRight("Hello", 'l'))
 }

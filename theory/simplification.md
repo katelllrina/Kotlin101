@@ -18,6 +18,11 @@
 |------------------|---------------|----------|
 | `start..end - 1` | `start..<end` | Always   | 
 
+Examples:
+
+- `for (i in 0..str.length - 1) { ... }`
+- `for (i in 0..<str.length) { ... }`
+
 ## Shortening
 
 1. Last return
