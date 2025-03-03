@@ -47,6 +47,30 @@ fun findIndexRight(str: String, c: Char): Int {
     return -1
 }
 
+fun equal (str1: String, str2: String): Boolean {
+    if (str1.length != str2.length) return false
+    for ( i in 0..<str1.length) {
+        val c1 = str1[i]
+        val c2 = str2[i]
+        if (c1 != c2) return false
+    }
+    return true
+}
+
+// createIntRangeString(9, 12) = "9 10 11 12"
+// createIntRangeString(9, 9) = "9"
+// createIntRangeString(9, 5) = ""
+fun createIntRangeString(start: Int, end: Int): String {
+    if (start > end) return "error"
+    if (start == end) return "$start"
+
+    var answer = "$start"
+    for (i in start + 1..end) {
+        answer += " $i"  // answer = answer + " $i"
+    }
+    return answer
+}
+
 fun main() {
     println("Hello, world!")
     println("100 + 50 = 264 :(")
@@ -71,4 +95,14 @@ fun main() {
     println(findIndex("Hello", 'o'))
     println(findIndex("Hello", 'l'))
     println(findIndexRight("Hello", 'l'))
+
+    println(equal("Hello, world!", "Hello, world!" ))
+    println(equal("Hello, world!", "Hello, worhd!" ))
+    println(equal("", "Hello!" ))
+
+    println("=== createIntRangeString ===")
+    println(createIntRangeString(9, 12))
+    println(createIntRangeString(14, 17))
+    println(createIntRangeString(13, 10))
+
 }
