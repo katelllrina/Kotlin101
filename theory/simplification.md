@@ -51,3 +51,13 @@ Examples:
    ```kotlin
    for (i in <start>..<end> - 1) { ... }
    ```
+
+3. Float return
+   Before
+   ```kotlin
+   if (x > y) return y else return x
+   ```
+   After
+   ```kotlin
+   return if (x > y) y else x
+   ```
