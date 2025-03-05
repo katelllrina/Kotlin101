@@ -37,6 +37,7 @@
   - `while (n < 10) { n += 1 }`
 - `for`: for-loop
   - `for (i in 3..7) { println(i) }`
+- `break`: finish loop earlier
 
 ### For-loops
 
@@ -81,6 +82,18 @@ Single symbol
 
 Text of arbitrary length: `"Hello, it's Friday!"`
 
-- str[i]: symbol at index `i` (starts with 0)
+- `str[i]`: symbol at index `i` (starts with 0)
   - Has type `Char`
-- s.length: number of symbols in the string
+- `s.length`: number of symbols in the string
+- `s.substring(start..end)`: substring from `s` between `start` and `end` (both inclusive)
+  - `s.substring(0..2)`
+  - `s.substring(3..<8)`
+  - `s.substring(1..<len)`
+
+## Standard Functions
+
+- `println`: print anything to terminal and add new line
+- `print`: print anything to terminal; don't add new line
+- `min`: minimum of two numbers
+  - Requires: `import kotlin.math.*`
+  - Example: `min(3, 7)`

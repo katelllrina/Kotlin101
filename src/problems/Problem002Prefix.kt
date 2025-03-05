@@ -12,13 +12,12 @@ import kotlin.math.*
 // commonPrefix("kate", "kate") = "kate"
 fun commonPrefix(str1: String, str2: String): String {
     if (str1 == "" || str2 == "") return ""
-    if (str1[0] != str2[0]) return ""
-    var answer = "${str1[0]}"
-    for (i in 1 ..< min(str1.length, str2.length)) {
-        if (str1[i] != str2[i]) return answer
-        answer += "${str1[i]}"
+    var answerLength = 0
+    for (i in 0 ..< min(str1.length, str2.length)) {
+        if (str1[i] != str2[i]) break
+        answerLength += 1
     }
-    return answer
+    return str1.substring(0..<answerLength)
 }
 
 fun main () {
