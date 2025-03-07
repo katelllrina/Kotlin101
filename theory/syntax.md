@@ -38,6 +38,8 @@
 - `for`: for-loop
   - `for (i in 3..7) { println(i) }`
 - `break`: finish loop earlier
+- `when`: pattern matching
+  - `when (c) { '1' -> true; else -> false }`
 
 ### For-loops
 

@@ -61,3 +61,13 @@ Examples:
    ```kotlin
    return if (x > y) y else x
    ```
+   
+4. Simplify Boolean if
+   Before
+   ```kotlin
+   if (something) true else false
+   ```
+   After
+   ```kotlin
+   something
+   ```
