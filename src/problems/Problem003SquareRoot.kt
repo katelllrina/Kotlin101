@@ -2,9 +2,8 @@ package problems
 
 // sqr(5) = 25
 // sqr(-3) = 9
-fun sqr (n: Long): Long {
-    return n * n
-}
+
+fun sqr (n: Long) = n * n
 
 // sqrt(25) = 5
 // sqrt(49) = 7

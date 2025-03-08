@@ -1,19 +1,16 @@
-fun lastDigit(n: Int): Int {
-    return n % 10
-}
+fun lastDigit(n: Int) = n % 10
 
-fun cutDigit(n: Int): Int {
-    return n / 10
-}
+
+fun cutDigit(n: Int) = n / 10
+
 
 fun cutMiddleDigit(n: Int): Int {
     // return n / 10 % 10
     return lastDigit(cutDigit(n))
 }
 
-fun sumDigit2(n: Int):Int {
-  return lastDigit(n) + cutDigit(n)
-}
+fun sumDigit2(n: Int) = lastDigit(n) + cutDigit(n)
+
 
 fun sumDigit2Alternative(n: Int): Int {
     val last = lastDigit(n)
@@ -21,10 +18,9 @@ fun sumDigit2Alternative(n: Int): Int {
     return last + first
 }
 
-fun sumDigit3(n: Int):Int {
-    return lastDigit(n) + cutMiddleDigit (n) + cutDigit(cutDigit(n))
+fun sumDigit3(n: Int) = lastDigit(n) + cutMiddleDigit (n) + cutDigit(cutDigit(n))
     // return lastDigit(n) + lastDigit(cutDigit(n)) + cutDigit(cutDigit(n))
-}
+
 
 fun sumDigit3Alternative(n: Int): Int { // n = 34
     val cut = cutDigit(n) // 3

@@ -71,3 +71,14 @@ Examples:
    ```kotlin
    something
    ```
+5. Single-expression functions
+   Before
+   ```kotlin
+   fun myFunction(...): SomeType {
+     return something
+   }
+   ```
+   After
+   ```kotlin
+   fun myFunction(...) = something
+   ```
