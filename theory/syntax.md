@@ -77,6 +77,8 @@ Numbers, positive or negative, 64 bits, between:
 Single symbol
 
 - '1', 'x', '5'
+- `c.code`: ASCII code for symbol
+  - `c.code = 48` then symbol is '0' (see ASCII table)
 
 **!!! IMPORTANT !!!** `1` and `'1'` are not the same!
 

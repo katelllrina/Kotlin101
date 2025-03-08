@@ -38,6 +38,32 @@ fun isDigit4(c: Char): Boolean {
     return ('0' <= c && c <= '9')
 }
 
+fun isDigit5(c: Char): Boolean {
+    return (c in '0'..'9')
+}
+
+// charToDigit('7') = 7
+// charToDigit('h') = -1
+fun charToDigit(c: Char): Int {
+    return when (c) {
+        '0' -> 0
+        '1' -> 1
+        '2' -> 2
+        '3' -> 3
+        '4' -> 4
+        '5' -> 5
+        '6' -> 6
+        '7' -> 7
+        '8' -> 8
+        '9' -> 9
+        else -> -1
+    }
+}
+
+// Please, run isDigit first!!
+fun charToDigit2(c: Char): Int {
+    return c.code - 48
+}
 
 fun main () {
     println("=== isDigit ===")
@@ -55,4 +81,12 @@ fun main () {
     println("=== isDigit4 ===")
     println (isDigit4('7'))
     println (isDigit4('h'))
+
+
+    println (charToDigit('7'))
+    println (charToDigit('h'))
+
+    println (charToDigit2('7'))
+    println (charToDigit2('6'))
+    println (charToDigit2('h'))
 }
