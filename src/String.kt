@@ -71,6 +71,15 @@ fun createIntRangeString(start: Int, end: Int): String {
     return answer
 }
 
+// isNumber("77") = true
+// isNumber("kate") = false
+fun isNumber(s: String): Boolean {
+    for (char in s) {
+        if (!char.isDigit()) return false
+    }
+    return true
+}
+
 fun main() {
     println("Hello, world!")
     println("100 + 50 = 264 :(")
@@ -104,5 +113,10 @@ fun main() {
     println(createIntRangeString(9, 12))
     println(createIntRangeString(14, 17))
     println(createIntRangeString(13, 10))
+
+
+    println(isNumber("Kate"))
+    println(isNumber("777Kate"))
+    println(isNumber("777"))
 
 }

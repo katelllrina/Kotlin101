@@ -4,10 +4,8 @@ fun lastDigit(n: Int) = n % 10
 fun cutDigit(n: Int) = n / 10
 
 
-fun cutMiddleDigit(n: Int): Int {
-    // return n / 10 % 10
-    return lastDigit(cutDigit(n))
-}
+fun cutMiddleDigit(n: Int) = lastDigit(cutDigit(n))
+
 
 fun sumDigit2(n: Int) = lastDigit(n) + cutDigit(n)
 
