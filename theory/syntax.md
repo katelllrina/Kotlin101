@@ -19,6 +19,12 @@
 - `==`: equal
 - `!=`: not equal
 
+### Boolean
+
+- `&&`: boolean and
+- `||`: boolean or
+- `!`: boolean not
+
 ## Keywords
 
 - `fun`: define new function
