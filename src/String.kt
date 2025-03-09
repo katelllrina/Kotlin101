@@ -72,10 +72,13 @@ fun createIntRangeString(start: Int, end: Int): String {
 }
 
 // isNumber("77") = true
+// isNumber("-77") = true
 // isNumber("kate") = false
 fun isNumber(s: String): Boolean {
-    for (char in s) {
-        if (!char.isDigit()) return false
+    if (s == "-" || s == "") return false
+    val start = if (s[0] == '-') 1 else 0
+    for (i in start..<s.length) {
+        if (!s[i].isDigit()) return false
     }
     return true
 }
@@ -118,5 +121,9 @@ fun main() {
     println(isNumber("Kate"))
     println(isNumber("777Kate"))
     println(isNumber("777"))
-
+    println(isNumber("-777"))
+    println(isNumber("777-"))
+    println(isNumber("-"))
+    println(isNumber("--"))
+    println(isNumber(""))
 }
