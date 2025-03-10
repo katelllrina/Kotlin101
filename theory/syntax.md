@@ -102,6 +102,15 @@ Text of arbitrary length: `"Hello, it's Friday!"`
   - `s.substring(3..<8)`
   - `s.substring(1..<len)`
 
+### Array
+
+Collections of elements with position
+
+- `arrayOf`: create new array
+  - `arrayOf(23, 14, 5, 42)`
+  - `arrayOf("Kate", "Dima")`
+- `arr.joinToString()`: print as pretty string
+
 ## Standard Functions
 
 - `println`: print anything to terminal and add new line
