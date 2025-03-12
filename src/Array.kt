@@ -42,6 +42,24 @@ fun equal (arr1: Array<Int>, arr2: Array<Int>): Boolean {
     return true
 }
 
+// zeroNegative(2, -1, 3, -5) = arrayOf(2, 0, 3, 0)
+fun zeroNegative(arr: Array<Int>): Array<Int> {
+    val result = Array(arr.size) { 0 }
+    for (i in 0..<arr.size) {
+        if (arr[i] > 0) result[i] = arr[i]
+    }
+    return result
+}
+
+// squareEverything(2, -1, 3, -5) = arrayOf(4, 1, 9, 25)
+fun squareEverything(arr: Array<Int>): Array<Int> {
+    val result = Array(arr.size) { 0 }
+    for (i in 0..<arr.size) {
+        result[i] = arr[i] * arr[i]
+    }
+    return result
+}
+
 fun main () {
     val arrayExample = arrayOf(23, 14, 5, 42)
     val emptyArray = arrayOf<Int>()
@@ -64,4 +82,8 @@ fun main () {
     println(equal(arrayOf(2, 3, 5, 2, 2, 4), arrayOf(2, 3, 5, 2, 0, 4)))
     println(equal(arrayOf(2, 3, 5, 2, 2, 4), arrayOf(2, 3, 5, 2, 0)))
 
+    println("=== zeroNegative ===")
+    println(zeroNegative(arrayOf(2, -1, 3, -1)).joinToString())
+
+    println(squareEverything(arrayOf(2, -7, 3, -1)).joinToString())
 }

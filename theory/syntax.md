@@ -110,6 +110,7 @@ Collections of elements with position
   - `arrayOf(23, 14, 5, 42)`
   - `arrayOf("Kate", "Dima")`
 - `arr.joinToString()`: print as pretty string
+- `val result = Array(15) { 0 }`: create new array of size 15 and fill with zeroes by default
 
 ## Standard Functions
 
