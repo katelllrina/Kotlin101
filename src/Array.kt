@@ -60,6 +60,21 @@ fun squareEverything(arr: Array<Int>): Array<Int> {
     return result
 }
 
+fun squareEverythingInplace(arr: Array<Int>) {
+    for (i in 0..<arr.size) {
+        arr[i] = arr[i] * arr[i]
+    }
+}
+
+// longestWord(arrayOf("dishes", "fire", "beautiful", "wife")) = "beautiful"
+fun longestWord (arr: Array<String>): String {
+    var longest = arr[0]
+    for (i in 1..<arr.size) {
+        if (arr[i].length > longest.length) longest = arr[i]
+    }
+    return longest
+}
+
 fun main () {
     val arrayExample = arrayOf(23, 14, 5, 42)
     val emptyArray = arrayOf<Int>()
@@ -86,4 +101,12 @@ fun main () {
     println(zeroNegative(arrayOf(2, -1, 3, -1)).joinToString())
 
     println(squareEverything(arrayOf(2, -7, 3, -1)).joinToString())
+
+    println("=== squareEverythingInplace ===")
+    val exampleArray = arrayOf(1, 9, 20, -5)
+    println(exampleArray.joinToString())
+    squareEverythingInplace(exampleArray)
+    println(exampleArray.joinToString())
+
+    println(longestWord(arrayOf("dishes", "fire", "beautiful", "wife")))
 }
