@@ -75,6 +75,24 @@ fun longestWord (arr: Array<String>): String {
     return longest
 }
 
+fun shortestWord (arr: Array<String>): String {
+    var shortest = arr[0]
+    for (i in 1..<arr.size) {
+        if (arr[i].length < shortest.length) shortest = arr[i]
+    }
+    return shortest
+}
+
+// countBig(arrayOf("dishes", "fire", "beautiful", "wife"), 4) = 2
+fun countBig(arr: Array<String>, minLength: Int): Int {
+    var count = 0
+    for (i in 0..<arr.size) {
+        if (arr[i].length > minLength) count += 1
+    }
+    return count
+}
+
+
 fun main () {
     val arrayExample = arrayOf(23, 14, 5, 42)
     val emptyArray = arrayOf<Int>()
@@ -109,4 +127,9 @@ fun main () {
     println(exampleArray.joinToString())
 
     println(longestWord(arrayOf("dishes", "fire", "beautiful", "wife")))
+    println(shortestWord(arrayOf("dishes", "fire", "beautiful", "wife")))
+
+    println(countBig(arrayOf("dishes", "fire", "beautiful", "wife"), 4))
+    println(countBig(arrayOf("dishes", "fire", "beautiful", "wife"), 6))
+    println(countBig(arrayOf("dishes", "fire", "beautiful", "wife"), 1))
 }
