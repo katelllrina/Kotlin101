@@ -16,6 +16,15 @@ fun count(arr: Array<Int>, number: Int): Int {
     return count
 }
 
+///32//
+
+fun maximum(arr: Array<Int>): Int {
+    var max = arr[0]
+    for (i in 0 ..<arr.size) {
+      if (max < arr[i])  max = arr[i]
+    }
+return max
+}
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -23,4 +32,6 @@ fun main() {
     println(countZeros(arrayOf(0, 0, 0, 0, 0, 4)))
     println(count(arrayOf(2, 2, 2, 0), 2))
     println(count(arrayOf(2, 0, 3, 0), 3))
+    println(maximum(arrayOf(2, 0, 3, 1)))
+    println(maximum(arrayOf(5, 6, 9, 4)))
 }
