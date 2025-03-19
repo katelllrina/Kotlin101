@@ -26,6 +26,17 @@ fun maximum(arr: Array<Int>): Int {
 return max
 }
 
+///33//
+
+fun minimum(arr: Array<Int>): Int {
+    var min = arr[0]
+    for (i in 0 ..<arr.size) {
+        if (min > arr[i])  min = arr[i]
+    }
+    return min
+}
+
+
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
     println(countZeros(arrayOf(0, 0, 0, 0)))
@@ -34,4 +45,6 @@ fun main() {
     println(count(arrayOf(2, 0, 3, 0), 3))
     println(maximum(arrayOf(2, 0, 3, 1)))
     println(maximum(arrayOf(5, 6, 9, 4)))
+    println(minimum(arrayOf(2, 0, 3, 1)))
+    println(minimum(arrayOf(5, 6, 9, 4)))
 }
