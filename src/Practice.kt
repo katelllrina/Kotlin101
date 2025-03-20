@@ -36,6 +36,13 @@ fun minimum(arr: Array<Int>): Int {
     return min
 }
 
+fun countSmall(arr: Array<String>, number: Int): Int {
+    var count = 0
+    for (i in 0 ..<arr.size) {
+        if ( arr[i].length <= number)  count += 1
+    }
+    return count
+}
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -47,4 +54,7 @@ fun main() {
     println(maximum(arrayOf(5, 6, 9, 4)))
     println(minimum(arrayOf(2, 0, 3, 1)))
     println(minimum(arrayOf(5, 6, 9, 4)))
+    println("Practice 34")
+    println(countSmall(arrayOf("dishes", "fire", "beautiful", "wife", "apple","affordable"), 7))
+    println(countSmall(arrayOf("hi", "buy", "good", "yes", "no","affordable"), 2))
 }
