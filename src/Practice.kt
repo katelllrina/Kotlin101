@@ -20,28 +20,41 @@ fun count(arr: Array<Int>, number: Int): Int {
 
 fun maximum(arr: Array<Int>): Int {
     var max = arr[0]
-    for (i in 0 ..<arr.size) {
-      if (max < arr[i])  max = arr[i]
+    for (i in 0..<arr.size) {
+        if (max < arr[i]) max = arr[i]
     }
-return max
+    return max
 }
 
 ///33//
 
 fun minimum(arr: Array<Int>): Int {
     var min = arr[0]
-    for (i in 0 ..<arr.size) {
-        if (min > arr[i])  min = arr[i]
+    for (i in 0..<arr.size) {
+        if (min > arr[i]) min = arr[i]
     }
     return min
 }
 
+///34//
 fun countSmall(arr: Array<String>, number: Int): Int {
     var count = 0
-    for (i in 0 ..<arr.size) {
-        if ( arr[i].length <= number)  count += 1
+    for (i in 0..<arr.size) {
+        if (arr[i].length <= number) count += 1
     }
     return count
+}
+
+
+///35//
+
+
+fun pow2 (n: Int): Int {
+   var result = 1
+    for (i in 1 .. n) {
+        result *= 2
+    }
+    return result
 }
 
 fun main() {
@@ -54,7 +67,14 @@ fun main() {
     println(maximum(arrayOf(5, 6, 9, 4)))
     println(minimum(arrayOf(2, 0, 3, 1)))
     println(minimum(arrayOf(5, 6, 9, 4)))
-    println("Practice 34")
-    println(countSmall(arrayOf("dishes", "fire", "beautiful", "wife", "apple","affordable"), 7))
-    println(countSmall(arrayOf("hi", "buy", "good", "yes", "no","affordable"), 2))
+    println(countSmall(arrayOf("dishes", "fire", "beautiful", "wife", "apple", "affordable"), 7))
+    println(countSmall(arrayOf("hi", "buy", "good", "yes", "no", "affordable"), 2))
+    println(pow2(5))
+    println(pow2(2))
+    println(pow2(1))
+    println(pow2(0))
 }
+
+
+
+
