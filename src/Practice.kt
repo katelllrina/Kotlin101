@@ -46,13 +46,23 @@ fun countSmall(arr: Array<String>, number: Int): Int {
 }
 
 
-///35//
+///5//
 
 
 fun pow2 (n: Int): Int {
-   var result = 1
-    for (i in 1 .. n) {
+    var result = 1
+    for (i in 1..n) {
         result *= 2
+    }
+    return result
+}
+
+///6//
+
+fun pow (base: Int, exponent: Int, ): Int {
+    var result = 1
+    for (i in 1..exponent) {
+        result *= base
     }
     return result
 }
@@ -73,6 +83,11 @@ fun main() {
     println(pow2(2))
     println(pow2(1))
     println(pow2(0))
+    println(pow(5, 2))
+    println(pow(2, 5))
+    println(pow(1, 6))
+    println(pow(9, 3))
+
 }
 
 
