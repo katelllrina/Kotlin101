@@ -1,7 +1,7 @@
-fun lastDigit(n: Int) = n % 10
+fun lastDigit(n: Int) = n % 2
 
 
-fun cutDigit(n: Int) = n / 10
+fun cutDigit(n: Int) = n / 2
 
 
 fun cutMiddleDigit(n: Int) = lastDigit(cutDigit(n))
@@ -55,9 +55,9 @@ fun sumDigitsRec2(n: Int): Int {
 fun sumDigitsRec3(n: Int): Int = if (n < 10) n else sumDigitsRec3(cutDigit(n)) + lastDigit(n)
 
 fun main() {
-    println(lastDigit(2356))
+    println(lastDigit(1))
 
-    println(cutDigit(56))
+    println(cutDigit(1))
 
     println( sumDigit2 (12))
 

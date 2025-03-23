@@ -49,7 +49,7 @@ fun countSmall(arr: Array<String>, number: Int): Int {
 ///5//
 
 
-fun pow2 (n: Int): Int {
+fun pow2(n: Int): Int {
     var result = 1
     for (i in 1..n) {
         result *= 2
@@ -59,13 +59,27 @@ fun pow2 (n: Int): Int {
 
 ///6//
 
-fun pow (base: Int, exponent: Int, ): Int {
+fun pow(base: Int, exponent: Int): Int {
     var result = 1
     for (i in 1..exponent) {
         result *= base
     }
     return result
 }
+
+//7//
+
+fun isPowerOf2(n: Int): Boolean {
+    if (n == 0) return false
+    var cut = n
+    while (cut > 1) {
+       if (cut % 2 != 0) return false
+        cut /= 2
+    }
+    return true
+}
+
+
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -87,6 +101,11 @@ fun main() {
     println(pow(2, 5))
     println(pow(1, 6))
     println(pow(9, 3))
+    println("Practice 7")
+    println(isPowerOf2(16))
+    println(isPowerOf2(15))
+    println(isPowerOf2(1))
+    println(isPowerOf2(18))
 
 }
 
