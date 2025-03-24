@@ -79,6 +79,18 @@ fun isPowerOf2(n: Int): Boolean {
     return true
 }
 
+//8//
+
+fun isPowerOf(base: Int, n: Int): Boolean {
+    if (n == 0) return false
+    if (n == 1) return true
+    var cut = base
+    while ( cut < n) {
+       cut *= base
+    }
+    return cut == n
+}
+
 
 
 fun main() {
@@ -106,6 +118,18 @@ fun main() {
     println(isPowerOf2(15))
     println(isPowerOf2(1))
     println(isPowerOf2(18))
+    println("Practice 8")
+    println(isPowerOf(3, 81))
+    println(isPowerOf(3, 15))
+    println(isPowerOf(3, 1))
+    println(isPowerOf(3, 27))
+    println(isPowerOf(4, 64))
+    println(isPowerOf(3, 55))
+    println(isPowerOf(5, 625))
+    println(isPowerOf(2, 8))
+    println(isPowerOf(2, 10))
+
+
 
 }
 
