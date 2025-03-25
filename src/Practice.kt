@@ -91,7 +91,16 @@ fun isPowerOf(base: Int, n: Int): Boolean {
     return cut == n
 }
 
+///9//
 
+fun biggestPowerOf2(n: Int): Int {
+    if (n == 1) return -1
+    var base = 1
+    while ( base < n) {
+        base *= 2
+    }
+    return base / 2
+}
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -105,6 +114,7 @@ fun main() {
     println(minimum(arrayOf(5, 6, 9, 4)))
     println(countSmall(arrayOf("dishes", "fire", "beautiful", "wife", "apple", "affordable"), 7))
     println(countSmall(arrayOf("hi", "buy", "good", "yes", "no", "affordable"), 2))
+    println("Practice 4")
     println(pow2(5))
     println(pow2(2))
     println(pow2(1))
@@ -128,6 +138,13 @@ fun main() {
     println(isPowerOf(5, 625))
     println(isPowerOf(2, 8))
     println(isPowerOf(2, 10))
+    println("Practice 9")
+    println(biggestPowerOf2(156))
+    println(biggestPowerOf2(15))
+    println(biggestPowerOf2(65))
+    println(biggestPowerOf2(33))
+    println(biggestPowerOf2(1))
+
 
 
 
