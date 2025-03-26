@@ -102,6 +102,14 @@ fun biggestPowerOf2(n: Int): Int {
     return base / 2
 }
 
+fun smallestPowerOf2(n: Int): Int {
+    if (n == 1) return -1
+    var base = 1
+    while ( base < n) {
+        base *= 2
+    }
+    return base
+}
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
     println(countZeros(arrayOf(0, 0, 0, 0)))
@@ -144,6 +152,11 @@ fun main() {
     println(biggestPowerOf2(65))
     println(biggestPowerOf2(33))
     println(biggestPowerOf2(1))
+    println(smallestPowerOf2(156))
+    println(smallestPowerOf2(15))
+    println(smallestPowerOf2(65))
+    println(smallestPowerOf2(33))
+    println(smallestPowerOf2(1))
 
 
 
