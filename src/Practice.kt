@@ -110,6 +110,12 @@ fun smallestPowerOf2(n: Int): Int {
     }
     return base
 }
+
+///13//
+
+fun isBinDigit(c: Char) = '0' == c || '1' == c
+
+
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
     println(countZeros(arrayOf(0, 0, 0, 0)))
@@ -157,6 +163,10 @@ fun main() {
     println(smallestPowerOf2(65))
     println(smallestPowerOf2(33))
     println(smallestPowerOf2(1))
+    println(smallestPowerOf2(1))
+    println(isBinDigit('0'))
+    println(isBinDigit('1'))
+    println(isBinDigit('7'))
 
 
 
