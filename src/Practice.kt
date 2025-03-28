@@ -115,6 +115,10 @@ fun smallestPowerOf2(n: Int): Int {
 
 fun isBinDigit(c: Char) = '0' == c || '1' == c
 
+///14//
+
+fun isOctDigit(c: Char) = c in '0' .. '7'
+
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -167,6 +171,11 @@ fun main() {
     println(isBinDigit('0'))
     println(isBinDigit('1'))
     println(isBinDigit('7'))
+    println(isOctDigit('0'))
+    println(isOctDigit('1'))
+    println(isOctDigit('7'))
+    println(isOctDigit('8'))
+    println(isOctDigit('9'))
 
 
 
