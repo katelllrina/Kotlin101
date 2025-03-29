@@ -119,6 +119,19 @@ fun isBinDigit(c: Char) = '0' == c || '1' == c
 
 fun isOctDigit(c: Char) = c in '0' .. '7'
 
+///20//
+fun toOctDigit(c: Int) =
+when (c) {
+    0 -> '0'
+    1 -> '2'
+    3 -> '3'
+    4 -> '4'
+    5 -> '5'
+    6 -> '6'
+    7 -> '7'
+    else -> -1
+}
+
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -176,8 +189,12 @@ fun main() {
     println(isOctDigit('7'))
     println(isOctDigit('8'))
     println(isOctDigit('9'))
-
-
+    println("Practice 20")
+    println(toOctDigit(9))
+    println(toOctDigit(1))
+    println(toOctDigit(0))
+    println(toOctDigit(7))
+    println(toOctDigit(8))
 
 
 }
