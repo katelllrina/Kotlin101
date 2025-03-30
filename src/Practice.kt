@@ -73,7 +73,7 @@ fun isPowerOf2(n: Int): Boolean {
     if (n == 0) return false
     var cut = n
     while (cut > 1) {
-       if (cut % 2 != 0) return false
+        if (cut % 2 != 0) return false
         cut /= 2
     }
     return true
@@ -85,8 +85,8 @@ fun isPowerOf(base: Int, n: Int): Boolean {
     if (n == 0) return false
     if (n == 1) return true
     var cut = base
-    while ( cut < n) {
-       cut *= base
+    while (cut < n) {
+        cut *= base
     }
     return cut == n
 }
@@ -96,7 +96,7 @@ fun isPowerOf(base: Int, n: Int): Boolean {
 fun biggestPowerOf2(n: Int): Int {
     if (n == 1) return -1
     var base = 1
-    while ( base < n) {
+    while (base < n) {
         base *= 2
     }
     return base / 2
@@ -105,7 +105,7 @@ fun biggestPowerOf2(n: Int): Int {
 fun smallestPowerOf2(n: Int): Int {
     if (n == 1) return -1
     var base = 1
-    while ( base < n) {
+    while (base < n) {
         base *= 2
     }
     return base
@@ -117,21 +117,35 @@ fun isBinDigit(c: Char) = '0' == c || '1' == c
 
 ///14//
 
-fun isOctDigit(c: Char) = c in '0' .. '7'
+fun isOctDigit(c: Char) = c in '0'..'7'
 
 ///20//
 fun toOctDigit(c: Int) =
-when (c) {
-    0 -> '0'
-    1 -> '2'
-    3 -> '3'
-    4 -> '4'
-    5 -> '5'
-    6 -> '6'
-    7 -> '7'
-    else -> -1
-}
+    when (c) {
+        0 -> '0'
+        1 -> '1'
+        2 -> '2'
+        3 -> '3'
+        4 -> '4'
+        5 -> '5'
+        6 -> '6'
+        7 -> '7'
+        else -> 'x'
+    }
 
+///20//
+fun fromOctDigit(c: Char) =
+    when (c) {
+        '0' -> 0
+        '1' -> 1
+        '2' -> 2
+        '3' -> 3
+        '4' -> 4
+        '5' -> 5
+        '6' -> 6
+        '7' -> 7
+        else -> -1
+    }
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -195,6 +209,11 @@ fun main() {
     println(toOctDigit(0))
     println(toOctDigit(7))
     println(toOctDigit(8))
+    println(fromOctDigit('9'))
+    println(fromOctDigit('1'))
+    println(fromOctDigit('0'))
+    println(fromOctDigit('7'))
+    println(fromOctDigit('8'))
 
 
 }
