@@ -133,7 +133,7 @@ fun toOctDigit(c: Int) =
         else -> 'x'
     }
 
-///20//
+///19//
 fun fromOctDigit(c: Char) =
     when (c) {
         '0' -> 0
@@ -144,6 +144,14 @@ fun fromOctDigit(c: Char) =
         '5' -> 5
         '6' -> 6
         '7' -> 7
+        else -> -1
+    }
+
+//18//
+fun fromBinDigit(c: Char) =
+    when (c) {
+        '0' -> 0
+        '1' -> 1
         else -> -1
     }
 
@@ -214,7 +222,9 @@ fun main() {
     println(fromOctDigit('0'))
     println(fromOctDigit('7'))
     println(fromOctDigit('8'))
-
+    println(fromBinDigit('1'))
+    println(fromBinDigit('0'))
+    println(fromBinDigit('6'))
 
 }
 
