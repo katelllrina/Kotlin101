@@ -155,6 +155,15 @@ fun fromBinDigit(c: Char) =
         else -> -1
     }
 
+
+//17//
+fun toBinDigit(c: Int) =
+    when (c) {
+        0 -> '0'
+        1 -> '1'
+        else -> 'x'
+    }
+
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
     println(countZeros(arrayOf(0, 0, 0, 0)))
@@ -225,6 +234,9 @@ fun main() {
     println(fromBinDigit('1'))
     println(fromBinDigit('0'))
     println(fromBinDigit('6'))
+    println(toBinDigit(1))
+    println(toBinDigit(0))
+    println(toBinDigit(5))
 
 }
 
