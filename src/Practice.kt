@@ -164,6 +164,14 @@ fun toBinDigit(c: Int) =
         else -> 'x'
     }
 
+//15//
+fun isHexDigit(c: Char) = c in '0'..'9' || c in 'A'..'F'
+
+
+
+
+// c.code - 65 + 10
+
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
     println(countZeros(arrayOf(0, 0, 0, 0)))
@@ -237,6 +245,13 @@ fun main() {
     println(toBinDigit(1))
     println(toBinDigit(0))
     println(toBinDigit(5))
+    println("Practice 15")
+    println(isHexDigit('5'))
+    println(isHexDigit('A'))
+    println(isHexDigit('L'))
+    println(isHexDigit('9'))
+    println(isHexDigit('S'))
+    println(isHexDigit('F'))
 
 }
 
