@@ -167,6 +167,9 @@ fun toBinDigit(c: Int) =
 //15//
 fun isHexDigit(c: Char) = c in '0'..'9' || c in 'A'..'F'
 
+//16//
+fun isHexDigitAll(c: Char) = c in '0'..'9' || c in 'A'..'F' || c in 'a'..'f'
+
 
 
 
@@ -252,6 +255,17 @@ fun main() {
     println(isHexDigit('9'))
     println(isHexDigit('S'))
     println(isHexDigit('F'))
+    println("Practice 16")
+    println(isHexDigitAll('5'))
+    println(isHexDigitAll('A'))
+    println(isHexDigitAll('l'))
+    println(isHexDigitAll('9'))
+    println(isHexDigitAll('S'))
+    println(isHexDigitAll('s'))
+    println(isHexDigitAll('F'))
+    println(isHexDigitAll('f'))
+    println(isHexDigitAll('b'))
+
 
 }
 
