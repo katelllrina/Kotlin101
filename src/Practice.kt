@@ -171,6 +171,12 @@ fun isHexDigit(c: Char) = c in '0'..'9' || c in 'A'..'F'
 fun isHexDigitAll(c: Char) = c in '0'..'9' || c in 'A'..'F' || c in 'a'..'f'
 
 
+//21//
+fun fromHexDigit(c: Char): Int {
+    if (c in '0'..'9') return c.code - 48
+    if (c in 'A'..'F') return c.code - 65 + 10
+    else return -1
+}
 
 
 // c.code - 65 + 10
@@ -265,6 +271,11 @@ fun main() {
     println(isHexDigitAll('F'))
     println(isHexDigitAll('f'))
     println(isHexDigitAll('b'))
+    println(fromHexDigit('2'))
+    println(fromHexDigit('D'))
+    println(fromHexDigit('b'))
+    println(fromHexDigit('Z'))
+    println(fromHexDigit('B'))
 
 
 }
