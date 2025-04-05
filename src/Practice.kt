@@ -178,6 +178,14 @@ fun fromHexDigit(c: Char): Int {
     else return -1
 }
 
+//22//
+fun fromHexDigitAll(c: Char): Int {
+    if (c in '0'..'9') return c.code - 48
+    if (c in 'A'..'F') return c.code - 65 + 10
+    if (c in 'a'..'f') return c.code - 97 + 10
+    else return -1
+}
+
 
 // c.code - 65 + 10
 
@@ -276,6 +284,12 @@ fun main() {
     println(fromHexDigit('b'))
     println(fromHexDigit('Z'))
     println(fromHexDigit('B'))
+    println(fromHexDigitAll('2'))
+    println(fromHexDigitAll('D'))
+    println(fromHexDigitAll('b'))
+    println(fromHexDigitAll('Z'))
+    println(fromHexDigitAll('B'))
+    println(fromHexDigitAll('a'))
 
 
 }
