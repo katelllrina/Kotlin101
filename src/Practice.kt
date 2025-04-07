@@ -208,8 +208,18 @@ fun toHexDigit(c: Int) =
         else -> '-'
     }
 
-
-
+//25//
+fun decimal2octal (n: Int): String {
+    var dec = n
+    if (dec < 8) return "$dec"
+    var res = ""
+    while (dec > 0) {
+        val digit = dec % 8
+        dec /= 8
+        res = "$digit" + res
+    }
+    return res
+}
 
 // c.code - 65 + 10
 
@@ -319,6 +329,14 @@ fun main() {
     println(toHexDigit(14))
     println(toHexDigit(18))
     println(toHexDigit(10))
+    println("Practice 25")
+    println(decimal2octal(5))
+    println(decimal2octal(8))
+    println(decimal2octal(4))
+    println(decimal2octal(7))
+    println(decimal2octal(16))
+    println(decimal2octal(19))
+
 
 
 }
