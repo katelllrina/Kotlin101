@@ -221,6 +221,19 @@ fun decimal2octal (n: Int): String {
     return res
 }
 
+//26//
+fun decimal2hex (n: Int): String {
+    var dec = n
+    var res = ""
+    while (dec > 0) {
+        val digit = dec % 16
+        val digitChar = toHexDigit(digit)
+        dec /= 16
+        res = "$digitChar" + res
+    }
+    return res
+}
+
 // c.code - 65 + 10
 
 fun main() {
@@ -336,6 +349,14 @@ fun main() {
     println(decimal2octal(7))
     println(decimal2octal(16))
     println(decimal2octal(19))
+    println("Practice 26")
+    println(decimal2hex(5))
+    println(decimal2hex(16))
+    println(decimal2hex(13))
+    println(decimal2hex(255))
+    println(decimal2hex(19))
+
+
 
 
 
