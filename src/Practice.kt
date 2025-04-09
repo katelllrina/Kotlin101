@@ -1,3 +1,5 @@
+import kotlin.math.min
+
 //30//
 fun countZeros(arr: Array<Int>): Int {
     var count = 0
@@ -236,6 +238,19 @@ fun decimal2hex (n: Int): String {
 
 // c.code - 65 + 10
 
+
+//11//
+fun gcd (n1: Int, n2: Int): Int {
+   var div = 1
+    for (x in 2 .. min(n1, n2)) {
+        if (n1 % x == 0 && n2 % x == 0)
+            div = x
+    }
+    return div
+}
+
+
+
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
     println(countZeros(arrayOf(0, 0, 0, 0)))
@@ -355,7 +370,9 @@ fun main() {
     println(decimal2hex(13))
     println(decimal2hex(255))
     println(decimal2hex(19))
-
+    println("Practice 11")
+    println(gcd(12, 15))
+    println(gcd(28, 17))
 
 
 
