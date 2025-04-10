@@ -211,7 +211,7 @@ fun toHexDigit(c: Int) =
     }
 
 //25//
-fun decimal2octal (n: Int): String {
+fun decimal2octal(n: Int): String {
     var dec = n
     if (dec < 8) return "$dec"
     var res = ""
@@ -224,7 +224,7 @@ fun decimal2octal (n: Int): String {
 }
 
 //26//
-fun decimal2hex (n: Int): String {
+fun decimal2hex(n: Int): String {
     var dec = n
     var res = ""
     while (dec > 0) {
@@ -240,16 +240,27 @@ fun decimal2hex (n: Int): String {
 
 
 //11//
-fun gcd (n1: Int, n2: Int): Int {
-   var div = 1
-    for (x in 2 .. min(n1, n2)) {
+fun gcd(n1: Int, n2: Int): Int {
+    var div = 1
+    for (x in 2..min(n1, n2)) {
         if (n1 % x == 0 && n2 % x == 0)
             div = x
     }
     return div
 }
 
-
+//27//
+fun binary2decimal(n: String): Int {
+    var res = 0
+    for (i in  0..< n.length) {
+        if (n[i] == '1') {
+            val exp = n.length - 1 - i
+            val s = pow2(exp)
+            res += s
+        }
+    }
+    return res
+}
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -373,7 +384,9 @@ fun main() {
     println("Practice 11")
     println(gcd(12, 15))
     println(gcd(28, 17))
-
+    println("Practice 27")
+    println(binary2decimal("1011"))
+    println(binary2decimal("1101"))
 
 
 
