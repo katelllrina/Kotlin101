@@ -250,9 +250,9 @@ fun gcd(n1: Int, n2: Int): Int {
 }
 
 //27//
-fun binary2decimal(n: String): Int {
+fun binary2decimal2(n: String): Int {
     var res = 0
-    for (i in  0..< n.length) {
+    for (i in 0..<n.length) {
         if (n[i] == '1') {
             val exp = n.length - 1 - i
             val s = pow2(exp)
@@ -261,6 +261,49 @@ fun binary2decimal(n: String): Int {
     }
     return res
 }
+
+//27//
+fun binary2decimal(n: String): Int {
+    var res = 0
+    for (i in 0..<n.length) {
+        val digit = fromBinDigit(n[i])
+        val exp = n.length - 1 - i
+        val s = pow2(exp)
+        res += s * digit
+
+    }
+    return res
+}
+
+//28//
+
+fun octal2decimal(n: String): Int {
+    var res = 0
+    for (i in 0..<n.length) {
+        val digit = fromOctDigit(n[i])
+        val exp = n.length - 1 - i
+        val s = pow(8,exp)
+        res += s * digit
+
+    }
+    return res
+}
+
+//28* //
+
+fun hex2decimal(n: String): Int {
+    var res = 0
+    for (i in 0..<n.length) {
+        val digit = fromHexDigit(n[i])
+        val exp = n.length - 1 - i
+        val s = pow(16,exp)
+        res += s * digit
+
+    }
+    return res
+}
+
+
 
 fun main() {
     println(countZeros(arrayOf(2, 0, 3, 0)))
@@ -387,7 +430,10 @@ fun main() {
     println("Practice 27")
     println(binary2decimal("1011"))
     println(binary2decimal("1101"))
-
+    println(octal2decimal("20"))
+    println(octal2decimal("21"))
+    println(octal2decimal("67"))
+    println(hex2decimal("67"))
 
 
 }
