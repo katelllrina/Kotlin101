@@ -68,6 +68,7 @@ fun squareEverythingInplace(arr: Array<Int>) {
 
 // longestWord(arrayOf("dishes", "fire", "beautiful", "wife")) = "beautiful"
 fun longestWord (arr: Array<String>): String {
+    if (arr.isEmpty()) return ""
     var longest = arr[0]
     for (i in 1..<arr.size) {
         if (arr[i].length > longest.length) longest = arr[i]
@@ -127,6 +128,8 @@ fun main () {
     println(exampleArray.joinToString())
 
     println(longestWord(arrayOf("dishes", "fire", "beautiful", "wife")))
+    println(longestWord(arrayOf()))
+
     println(shortestWord(arrayOf("dishes", "fire", "beautiful", "wife")))
 
     println(countBig(arrayOf("dishes", "fire", "beautiful", "wife"), 4))

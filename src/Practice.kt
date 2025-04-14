@@ -20,12 +20,22 @@ fun count(arr: Array<Int>, number: Int): Int {
 
 ///32//
 
-fun maximum(arr: Array<Int>): Int {
+fun maximum(arr: Array<Int>): Int? {
+    if (arr.isEmpty()) return null
     var max = arr[0]
     for (i in 0..<arr.size) {
         if (max < arr[i]) max = arr[i]
     }
     return max
+}
+
+fun printPrettyMaximum(arr: Array<Int>) {
+    val max = maximum(arr)
+    if (max == null) {
+        println("Array doesn't have elements")
+    } else {
+        println("Maximum is $max")
+    }
 }
 
 ///33//
@@ -282,7 +292,7 @@ fun octal2decimal(n: String): Int {
     for (i in 0..<n.length) {
         val digit = fromOctDigit(n[i])
         val exp = n.length - 1 - i
-        val s = pow(8,exp)
+        val s = pow(8, exp)
         res += s * digit
 
     }
@@ -296,13 +306,12 @@ fun hex2decimal(n: String): Int {
     for (i in 0..<n.length) {
         val digit = fromHexDigit(n[i])
         val exp = n.length - 1 - i
-        val s = pow(16,exp)
+        val s = pow(16, exp)
         res += s * digit
 
     }
     return res
 }
-
 
 
 fun main() {
@@ -313,6 +322,9 @@ fun main() {
     println(count(arrayOf(2, 0, 3, 0), 3))
     println(maximum(arrayOf(2, 0, 3, 1)))
     println(maximum(arrayOf(5, 6, 9, 4)))
+    println(maximum(arrayOf()))
+    printPrettyMaximum(arrayOf())
+    printPrettyMaximum(arrayOf(5, 4, 9))
     println(minimum(arrayOf(2, 0, 3, 1)))
     println(minimum(arrayOf(5, 6, 9, 4)))
     println(countSmall(arrayOf("dishes", "fire", "beautiful", "wife", "apple", "affordable"), 7))
