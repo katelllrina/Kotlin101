@@ -85,4 +85,5 @@ fun main() {
     printCollatzSequence(3)
     printCollatzSequence(7)
     printCollatzSequence(27)
+    printCollatzSequence(45)
 }
